@@ -41,8 +41,8 @@ class Package(models.Model):
     destination = models.CharField(max_length=100)
     description = models.TextField()
 
-    shipping_fee = models.DecimalField(max_digits=10, decimal_places=2)
-    shipping_fee_currency = models.CharField(
+    total_worth = models.DecimalField(max_digits=10, decimal_places=2)
+    total_worth_currency = models.CharField(
         max_length=3,
         choices=CURRENCY_CHOICES,
         default='USD'

@@ -87,7 +87,7 @@ def track_package(request):
         try:
             package = Package.objects.get(tracking_number=tracking_number)
             worth_symbol = currency_symbols.get(
-                package.shipping_fee_currency, '')
+                package.total_worth_currency, '')
             fee_symbol = currency_symbols.get(
                 package.clearance_fee_currency, '')
         except Package.DoesNotExist:
