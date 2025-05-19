@@ -4,7 +4,7 @@ import uuid
 # Currency choices
 CURRENCY_CHOICES = [
     ('USD', 'US Dollar'),
-    ('NGN', 'Naira'),
+    ('ZAR', 'Rand'),
     ('EUR', 'Euro'),
     ('GBP', 'British Pound'),
 ]
@@ -41,8 +41,8 @@ class Package(models.Model):
     destination = models.CharField(max_length=100)
     description = models.TextField()
 
-    total_worth = models.DecimalField(max_digits=10, decimal_places=2)
-    total_worth_currency = models.CharField(
+    shipping_fee = models.DecimalField(max_digits=10, decimal_places=2)
+    shipping_fee_currency = models.CharField(
         max_length=3,
         choices=CURRENCY_CHOICES,
         default='USD'

@@ -4,7 +4,7 @@ from .models import Package
 # Currency symbols dictionary
 currency_symbols = {
     'USD': '$',
-    'NGN': '₦',
+    'ZAR': 'R',
     'EUR': '€',
     'GBP': '£',
 }
@@ -87,7 +87,7 @@ def track_package(request):
         try:
             package = Package.objects.get(tracking_number=tracking_number)
             worth_symbol = currency_symbols.get(
-                package.total_worth_currency, '')
+                package.shipping_fee_currency, '')
             fee_symbol = currency_symbols.get(
                 package.clearance_fee_currency, '')
         except Package.DoesNotExist:
