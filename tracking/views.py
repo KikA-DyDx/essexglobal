@@ -72,6 +72,10 @@ def exportimport(request):
 def importersrep(request):
     return render(request, 'importers-logistics-rep.html')
 
+
+def payment(request):
+    return render(request, 'payment.html')
+
 def track_package(request):
     package = None
     error = None

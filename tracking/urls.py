@@ -19,4 +19,5 @@ urlpatterns = [
     path('soc-movements/', views.socmovements, name='soc-movements'),
     path('export-import/', views.exportimport, name='export-import'),
     path('importers-logistics-rep/', views.importersrep, name='importers-logistics-rep'),
+    path('payment/', views.payment, name='payment'),
 ]
