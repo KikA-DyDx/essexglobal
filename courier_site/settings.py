@@ -28,7 +28,8 @@ SECRET_KEY = "django-insecure-3zk5yxp^fpo42$yaye@p*q*3f+=%lq^qt%pnozjtms&0u*zc(e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['essexglobalexpress.com', 'www.essexglobalexpress.com']
+ALLOWED_HOSTS = ['essexglobalexpress.onrender.com',
+                 'essexglobalexpress.com', 'www.essexglobalexpress.com']
 
 
 # Application definition
